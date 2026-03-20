@@ -1,6 +1,7 @@
 package com.safetynet.alerts.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.safetynet.alerts.dto.FirestationResponseDTO;
 import com.safetynet.alerts.dto.PersonDTO;
 import com.safetynet.alerts.model.Firestation;
+import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.DataLoader;
 
@@ -15,9 +17,11 @@ import com.safetynet.alerts.repository.DataLoader;
 public class FirestationService {
 
     private final DataLoader dataLoader;
+    private final AgeCalculatorService ageCalculatorService;
 
-    public FirestationService(DataLoader dataLoader) {
+    public FirestationService(DataLoader dataLoader, AgeCalculatorService ageCalculatorService) {
         this.dataLoader = dataLoader;
+        this.ageCalculatorService = ageCalculatorService;
     }
 
     public FirestationResponseDTO getPersonsByStation(int stationNumber) {
@@ -32,20 +36,37 @@ public class FirestationService {
         List<Person> persons = dataLoader.getData()
                 .getPersons()
                 .stream()
-                .filter(p -> addresses.contains(p.getAddress()))
+                .filter(person -> addresses.contains(person.getAddress()))
                 .toList();
 
         List<PersonDTO> personDTOList = persons.stream()
-                .map(p -> new PersonDTO(
-                        p.getFirstName(),
-                        p.getLastName(),
-                        p.getAddress(),
-                        p.getPhone()))
+                .map(person -> new PersonDTO(
+                        person.getFirstName(),
+                        person.getLastName(),
+                        person.getAddress(),
+                        person.getPhone()
+                ))
                 .collect(Collectors.toList());
 
-        int adults = persons.size(); // simplifié pour l'instant
-        int children = 0;
+        int numberOfChildren = (int) persons.stream()
+                .filter(this::isChild)
+                .count();
 
-        return new FirestationResponseDTO(personDTOList, adults, children);
+        int numberOfAdults = persons.size() - numberOfChildren;
+
+        return new FirestationResponseDTO(personDTOList, numberOfAdults, numberOfChildren);
+    }
+
+    private boolean isChild(Person person) {
+        Optional<MedicalRecord> medicalRecord = dataLoader.getData()
+                .getMedicalrecords()
+                .stream()
+                .filter(record -> record.getFirstName().equalsIgnoreCase(person.getFirstName())
+                        && record.getLastName().equalsIgnoreCase(person.getLastName()))
+                .findFirst();
+
+        return medicalRecord
+                .map(record -> ageCalculatorService.isChild(record.getBirthdate()))
+                .orElse(false);
     }
 }
