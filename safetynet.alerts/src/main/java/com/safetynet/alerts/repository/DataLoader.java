@@ -1,5 +1,6 @@
 package com.safetynet.alerts.repository;
 
+import java.io.File;
 import java.io.InputStream;
 
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,10 @@ import jakarta.annotation.PostConstruct;
 @Repository
 public class DataLoader {
 
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
     private SafetyNetData data;
+    private File jsonFile;
 
     public SafetyNetData getData() {
         return data;
@@ -21,17 +25,15 @@ public class DataLoader {
     @PostConstruct
     public void loadData() {
         try {
-            ObjectMapper mapper = new ObjectMapper();
-
-            InputStream inputStream = getClass()
-                    .getClassLoader()
-                    .getResourceAsStream("data.json");
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("data.json");
 
             if (inputStream == null) {
                 throw new IllegalStateException("data.json not found in resources");
             }
 
-            data = mapper.readValue(inputStream, SafetyNetData.class);
+            data = objectMapper.readValue(inputStream, SafetyNetData.class);
+
+            jsonFile = new File("src/main/resources/data.json");
 
             System.out.println("Data loaded successfully");
             System.out.println("Persons: " + data.getPersons().size());
@@ -40,6 +42,14 @@ public class DataLoader {
 
         } catch (Exception e) {
             throw new RuntimeException("Failed to load data.json", e);
+        }
+    }
+
+    public void saveData() {
+        try {
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(jsonFile, data);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to save data.json", e);
         }
     }
 }
