@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.safetynet.alerts.model.MedicalRecord;
-import com.safetynet.alerts.service.MedicalRecordService;
+import com.safetynet.alerts.service.MedicalRecordCrudService;
 
 @RestController
 @RequestMapping("/medicalRecord")
-public class MedicalRecordController {
+public class MedicalRecordCrudController {
 
-    private final MedicalRecordService medicalRecordService;
+    private final MedicalRecordCrudService medicalRecordService;
 
-    public MedicalRecordController(MedicalRecordService medicalRecordService) {
+    public MedicalRecordCrudController(MedicalRecordCrudService medicalRecordService) {
         this.medicalRecordService = medicalRecordService;
     }
 

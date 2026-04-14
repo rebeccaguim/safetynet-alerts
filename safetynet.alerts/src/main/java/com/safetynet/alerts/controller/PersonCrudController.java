@@ -1,24 +1,18 @@
 package com.safetynet.alerts.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.safetynet.alerts.model.Person;
-import com.safetynet.alerts.service.PersonService;
+import com.safetynet.alerts.service.PersonCrudService;
 
 @RestController
 @RequestMapping("/person")
-public class PersonController {
+public class PersonCrudController {
 
-    private final PersonService personService;
+    private final PersonCrudService personService;
 
-    public PersonController(PersonService personService) {
+    public PersonCrudController(PersonCrudService personService) {
         this.personService = personService;
     }
 

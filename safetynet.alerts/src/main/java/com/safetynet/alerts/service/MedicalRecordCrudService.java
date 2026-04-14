@@ -6,11 +6,11 @@ import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.DataLoader;
 
 @Service
-public class MedicalRecordService {
+public class MedicalRecordCrudService {
 
     private final DataLoader dataLoader;
 
-    public MedicalRecordService(DataLoader dataLoader) {
+    public MedicalRecordCrudService(DataLoader dataLoader) {
         this.dataLoader = dataLoader;
     }
 

@@ -6,11 +6,11 @@ import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.DataLoader;
 
 @Service
-public class PersonService {
+public class PersonCrudService {
 
     private final DataLoader dataLoader;
 
-    public PersonService(DataLoader dataLoader) {
+    public PersonCrudService(DataLoader dataLoader) {
         this.dataLoader = dataLoader;
     }
 
