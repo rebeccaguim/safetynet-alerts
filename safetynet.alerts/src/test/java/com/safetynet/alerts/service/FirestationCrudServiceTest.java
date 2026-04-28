@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,6 +17,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.safetynet.alerts.exception.ResourceNotFoundException;
 import com.safetynet.alerts.model.Firestation;
 import com.safetynet.alerts.model.SafetyNetData;
 import com.safetynet.alerts.repository.DataLoader;
@@ -90,7 +90,7 @@ class FirestationCrudServiceTest {
     }
 
     @Test
-    void shouldReturnNullWhenUpdatingUnknownAddress() {
+    void shouldThrowExceptionWhenUpdatingUnknownAddress() {
         // Create data with one firestation
         Firestation existing = new Firestation();
         existing.setAddress("123 Test St");
@@ -106,11 +106,10 @@ class FirestationCrudServiceTest {
 
         when(dataLoader.getData()).thenReturn(data);
 
-        // Call the method
-        Firestation result = firestationCrudService.updateFirestation(updated);
-
-        // The result must be null because the address does not exist
-        assertNull(result);
+        // Check that an exception is thrown when address does not exist
+        assertThrows(ResourceNotFoundException.class, () ->
+                firestationCrudService.updateFirestation(updated)
+        );
 
         // saveData must not be called
         verify(dataLoader, never()).saveData();
@@ -145,7 +144,7 @@ class FirestationCrudServiceTest {
     }
 
     @Test
-    void shouldReturnFalseWhenDeletingUnknownAddress() {
+    void shouldThrowExceptionWhenDeletingUnknownAddress() {
         // Create data with one firestation
         Firestation f1 = new Firestation();
         f1.setAddress("123 Test St");
@@ -156,11 +155,12 @@ class FirestationCrudServiceTest {
 
         when(dataLoader.getData()).thenReturn(data);
 
-        // Call the method with an unknown address
-        boolean deleted = firestationCrudService.deleteByAddress("999 Unknown St");
+        // Check that an exception is thrown when address does not exist
+        assertThrows(ResourceNotFoundException.class, () ->
+                firestationCrudService.deleteByAddress("999 Unknown St")
+        );
 
         // Nothing should be deleted
-        assertFalse(deleted);
         assertEquals(1, data.getFirestations().size());
 
         // saveData must not be called
@@ -196,7 +196,7 @@ class FirestationCrudServiceTest {
     }
 
     @Test
-    void shouldReturnFalseWhenDeletingUnknownStation() {
+    void shouldThrowExceptionWhenDeletingUnknownStation() {
         // Create data with one firestation
         Firestation f1 = new Firestation();
         f1.setAddress("123 Test St");
@@ -207,11 +207,12 @@ class FirestationCrudServiceTest {
 
         when(dataLoader.getData()).thenReturn(data);
 
-        // Call the method with an unknown station
-        boolean deleted = firestationCrudService.deleteByStation("99");
+        // Check that an exception is thrown when station does not exist
+        assertThrows(ResourceNotFoundException.class, () ->
+                firestationCrudService.deleteByStation("99")
+        );
 
         // Nothing should be deleted
-        assertFalse(deleted);
         assertEquals(1, data.getFirestations().size());
 
         // saveData must not be called

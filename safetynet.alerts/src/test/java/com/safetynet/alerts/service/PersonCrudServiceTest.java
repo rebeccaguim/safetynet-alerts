@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.safetynet.alerts.exception.ResourceNotFoundException;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.SafetyNetData;
 import com.safetynet.alerts.repository.DataLoader;
@@ -24,109 +25,64 @@ import com.safetynet.alerts.repository.DataLoader;
 @ExtendWith(MockitoExtension.class)
 class PersonCrudServiceTest {
 
-    // Mock the DataLoader to avoid using real application data
     @Mock
+    // This creates a fake DataLoader
     private DataLoader dataLoader;
 
-    // Inject the mock into the service
     @InjectMocks
+    // This creates the service and injects the fake DataLoader into it
     private PersonCrudService personCrudService;
 
     @Test
     void shouldAddPerson() {
-
-        // Arrange: create an empty persons list
-        List<Person> persons = new ArrayList<>();
-
-        // Arrange: create SafetyNetData and set the persons list
+        // Create an empty data object
         SafetyNetData data = new SafetyNetData();
-        data.setPersons(persons);
+        data.setPersons(new ArrayList<>());
 
-        // Arrange: create the person to add
-        Person newPerson = new Person();
-        newPerson.setFirstName("John");
-        newPerson.setLastName("Boyd");
-        newPerson.setAddress("1509 Culver St");
-        newPerson.setCity("Culver");
-        newPerson.setZip("97451");
-        newPerson.setPhone("841-874-6512");
-        newPerson.setEmail("john.boyd@email.com");
+        // Create the person to add
+        Person person = new Person();
+        person.setFirstName("Jane");
+        person.setLastName("Doe");
+        person.setAddress("123 Test St");
+        person.setCity("Culver");
+        person.setZip("97451");
+        person.setPhone("123-456-7890");
+        person.setEmail("jane.doe@email.com");
 
-        // Mock DataLoader behavior
+        // Tell the mock what to return
         when(dataLoader.getData()).thenReturn(data);
 
-        // Act: call the service method
-        Person result = personCrudService.addPerson(newPerson);
+        // Call the method
+        Person result = personCrudService.addPerson(person);
 
-        // Assert: check that the person was added
-        assertEquals(1, persons.size());
-        assertTrue(persons.contains(newPerson));
-        assertEquals(newPerson, result);
+        // Check the result
+        assertNotNull(result);
+        assertEquals("Jane", result.getFirstName());
+        assertEquals("Doe", result.getLastName());
+        assertEquals(1, data.getPersons().size());
 
-        // Verify that saveData() was called
-        verify(dataLoader).saveData();
+        // Check that saveData was called
+        verify(dataLoader, times(1)).saveData();
     }
 
     @Test
     void shouldUpdatePersonWhenPersonExists() {
+        // Create existing person
+        Person existing = new Person();
+        existing.setFirstName("John");
+        existing.setLastName("Doe");
+        existing.setAddress("Old Address");
+        existing.setCity("Old City");
+        existing.setZip("00000");
+        existing.setPhone("000-000-0000");
+        existing.setEmail("old@email.com");
 
-        // Arrange: create an existing person
-        Person existingPerson = new Person();
-        existingPerson.setFirstName("John");
-        existingPerson.setLastName("Boyd");
-        existingPerson.setAddress("Old Address");
-        existingPerson.setCity("Old City");
-        existingPerson.setZip("00000");
-        existingPerson.setPhone("000-000-0000");
-        existingPerson.setEmail("old@email.com");
+        SafetyNetData data = new SafetyNetData();
+        data.setPersons(new ArrayList<>(List.of(existing)));
 
-        // Arrange: create the updated person with new information
+        // Create updated person with same first name and last name
         Person updatedPerson = new Person();
         updatedPerson.setFirstName("John");
-        updatedPerson.setLastName("Boyd");
-        updatedPerson.setAddress("New Address");
-        updatedPerson.setCity("New City");
-        updatedPerson.setZip("11111");
-        updatedPerson.setPhone("111-111-1111");
-        updatedPerson.setEmail("new@email.com");
-
-        // Arrange: create the persons list
-        List<Person> persons = new ArrayList<>();
-        persons.add(existingPerson);
-
-        // Arrange: create SafetyNetData
-        SafetyNetData data = new SafetyNetData();
-        data.setPersons(persons);
-
-        // Mock DataLoader behavior
-        when(dataLoader.getData()).thenReturn(data);
-
-        // Act: call the service method
-        Person result = personCrudService.updatePerson(updatedPerson);
-
-        // Assert: check that the person was updated
-        assertNotNull(result);
-        assertEquals("New Address", result.getAddress());
-        assertEquals("New City", result.getCity());
-        assertEquals("11111", result.getZip());
-        assertEquals("111-111-1111", result.getPhone());
-        assertEquals("new@email.com", result.getEmail());
-
-        // Verify that saveData() was called
-        verify(dataLoader).saveData();
-    }
-
-    @Test
-    void shouldReturnNullWhenUpdatingPersonThatDoesNotExist() {
-
-        // Arrange: create an existing person
-        Person existingPerson = new Person();
-        existingPerson.setFirstName("John");
-        existingPerson.setLastName("Boyd");
-
-        // Arrange: create a different person to update
-        Person updatedPerson = new Person();
-        updatedPerson.setFirstName("Jane");
         updatedPerson.setLastName("Doe");
         updatedPerson.setAddress("New Address");
         updatedPerson.setCity("New City");
@@ -134,84 +90,95 @@ class PersonCrudServiceTest {
         updatedPerson.setPhone("111-111-1111");
         updatedPerson.setEmail("new@email.com");
 
-        // Arrange: create the persons list
-        List<Person> persons = new ArrayList<>();
-        persons.add(existingPerson);
-
-        // Arrange: create SafetyNetData
-        SafetyNetData data = new SafetyNetData();
-        data.setPersons(persons);
-
-        // Mock DataLoader behavior
         when(dataLoader.getData()).thenReturn(data);
 
-        // Act: call the service method
+        // Call the method
         Person result = personCrudService.updatePerson(updatedPerson);
 
-        // Assert: check that no person was updated
-        assertNull(result);
+        // Check the result
+        assertNotNull(result);
+        assertEquals("New Address", result.getAddress());
+        assertEquals("New City", result.getCity());
+        assertEquals("11111", result.getZip());
+        assertEquals("111-111-1111", result.getPhone());
+        assertEquals("new@email.com", result.getEmail());
 
-        // Verify that saveData() was not called
+        // Check that saveData was called
+        verify(dataLoader, times(1)).saveData();
+    }
+
+    @Test
+    void shouldThrowExceptionWhenUpdatingPersonThatDoesNotExist() {
+        // Create existing person
+        Person existing = new Person();
+        existing.setFirstName("John");
+        existing.setLastName("Doe");
+
+        SafetyNetData data = new SafetyNetData();
+        data.setPersons(new ArrayList<>(List.of(existing)));
+
+        // Create person that does not exist
+        Person updatedPerson = new Person();
+        updatedPerson.setFirstName("Jane");
+        updatedPerson.setLastName("Doe");
+
+        when(dataLoader.getData()).thenReturn(data);
+
+        // Check that an exception is thrown because the person does not exist
+        assertThrows(ResourceNotFoundException.class, () ->
+                personCrudService.updatePerson(updatedPerson)
+        );
+
+        // saveData must not be called
         verify(dataLoader, never()).saveData();
     }
 
     @Test
     void shouldDeletePersonWhenPersonExists() {
+        // Create existing persons
+        Person p1 = new Person();
+        p1.setFirstName("John");
+        p1.setLastName("Doe");
 
-        // Arrange: create a person
-        Person person = new Person();
-        person.setFirstName("John");
-        person.setLastName("Boyd");
+        Person p2 = new Person();
+        p2.setFirstName("Jane");
+        p2.setLastName("Doe");
 
-        // Arrange: create the persons list
-        List<Person> persons = new ArrayList<>();
-        persons.add(person);
-
-        // Arrange: create SafetyNetData
         SafetyNetData data = new SafetyNetData();
-        data.setPersons(persons);
+        data.setPersons(new ArrayList<>(List.of(p1, p2)));
 
-        // Mock DataLoader behavior
         when(dataLoader.getData()).thenReturn(data);
 
-        // Act: call the service method
-        boolean result = personCrudService.deletePerson("John", "Boyd");
+        // Call the method
+        boolean deleted = personCrudService.deletePerson("Jane", "Doe");
 
-        // Assert: check that the person was deleted
-        assertTrue(result);
-        assertTrue(persons.isEmpty());
+        // Check that the person was deleted
+        assertTrue(deleted);
+        assertEquals(1, data.getPersons().size());
+        assertEquals("John", data.getPersons().get(0).getFirstName());
 
-        // Verify that saveData() was called
-        verify(dataLoader).saveData();
+        // Check that saveData was called
+        verify(dataLoader, times(1)).saveData();
     }
 
     @Test
-    void shouldReturnFalseWhenDeletingPersonThatDoesNotExist() {
+    void shouldThrowExceptionWhenDeletingPersonThatDoesNotExist() {
+        // Create existing person
+        Person existing = new Person();
+        existing.setFirstName("John");
+        existing.setLastName("Doe");
 
-        // Arrange: create a person
-        Person person = new Person();
-        person.setFirstName("John");
-        person.setLastName("Boyd");
-
-        // Arrange: create the persons list
-        List<Person> persons = new ArrayList<>();
-        persons.add(person);
-
-        // Arrange: create SafetyNetData
         SafetyNetData data = new SafetyNetData();
-        data.setPersons(persons);
+        data.setPersons(new ArrayList<>(List.of(existing)));
 
-        // Mock DataLoader behavior
         when(dataLoader.getData()).thenReturn(data);
 
-        // Act: call the service method
-        boolean result = personCrudService.deletePerson("Jane", "Doe");
+        // Check that an exception is thrown because the person does not exist
+        assertThrows(ResourceNotFoundException.class, () ->
+                personCrudService.deletePerson("Jane", "Doe")
+        );
 
-        // Assert: check that no person was deleted
-        assertFalse(result);
-        assertEquals(1, persons.size());
-
-        // Verify that saveData() was not called
+        // saveData must not be called
         verify(dataLoader, never()).saveData();
     }
 }
