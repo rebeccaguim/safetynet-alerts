@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SafetynetAlertsApplication<safetynet-alerts>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.safetynet.alerts.SafetynetAlertsApplication",
+            "projectName": "safetynet-alerts",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
