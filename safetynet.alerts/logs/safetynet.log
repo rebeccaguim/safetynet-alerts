@@ -1,240 +1,200 @@
-2026-04-28T15:39:35.531+02:00  INFO 17628 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 17628 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:39:35.536+02:00  INFO 17628 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:39:37.976+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:39:37.977+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:39:37.979+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2026-04-28T15:39:38.034+02:00  INFO 17628 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.386 seconds (process running for 5.656)
-2026-04-28T15:39:38.480+02:00  INFO 17628 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:39:38.503+02:00  INFO 17628 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T15:39:38.511+02:00  INFO 17628 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:39:38.546+02:00  INFO 17628 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 17628 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:39:38.546+02:00  INFO 17628 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:39:38.786+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:39:38.787+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:39:38.787+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-04-28T15:39:38.794+02:00  INFO 17628 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.284 seconds (process running for 6.416)
-2026-04-28T15:39:38.855+02:00  INFO 17628 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:39:38.865+02:00  INFO 17628 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T15:39:38.875+02:00  INFO 17628 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:39:38.894+02:00  INFO 17628 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 17628 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:39:38.895+02:00  INFO 17628 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:39:39.340+02:00  INFO 17628 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T15:39:39.340+02:00  INFO 17628 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T15:39:39.343+02:00  INFO 17628 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T15:39:39.343+02:00  INFO 17628 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T15:39:39.634+02:00  INFO 17628 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.76 seconds (process running for 7.255)
-2026-04-28T15:39:39.822+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:39:39.829+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:39:39.836+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:39:39.837+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:39:39.842+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:39:39.843+02:00  INFO 17628 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T15:39:39.926+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: John Boyd
-2026-04-28T15:39:39.927+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: John Boyd
-2026-04-28T15:39:39.930+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: John Boyd
-2026-04-28T15:39:39.934+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Boyd
-2026-04-28T15:39:39.935+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Boyd
-2026-04-28T15:39:39.938+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T15:39:39.938+02:00  WARN 17628 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T15:39:39.941+02:00  INFO 17628 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T15:39:39.942+02:00  WARN 17628 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
-2026-04-28T15:55:15.401+02:00  INFO 22684 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 22684 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:55:15.404+02:00  INFO 22684 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:55:18.064+02:00  INFO 22684 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:55:18.064+02:00  INFO 22684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:55:18.066+02:00  INFO 22684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2026-04-28T15:55:18.110+02:00  INFO 22684 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.5 seconds (process running for 5.716)
-2026-04-28T15:55:18.557+02:00  INFO 22684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:55:18.583+02:00  INFO 22684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T15:55:18.589+02:00  INFO 22684 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:55:18.632+02:00  INFO 22684 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 22684 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:55:18.632+02:00  INFO 22684 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:55:18.887+02:00  INFO 22684 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:55:18.887+02:00  INFO 22684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:55:18.887+02:00  INFO 22684 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-04-28T15:55:18.895+02:00  INFO 22684 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.306 seconds (process running for 6.502)
-2026-04-28T15:55:18.944+02:00  INFO 22684 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:55:18.954+02:00  INFO 22684 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T15:55:18.962+02:00  INFO 22684 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:55:18.986+02:00  INFO 22684 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 22684 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:55:18.986+02:00  INFO 22684 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:55:19.356+02:00  INFO 22684 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T15:55:19.356+02:00  INFO 22684 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T15:55:19.358+02:00  INFO 22684 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T15:55:19.358+02:00  INFO 22684 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T15:55:19.585+02:00  INFO 22684 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.623 seconds (process running for 7.192)
-2026-04-28T15:55:19.772+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:55:19.776+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:55:19.782+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:55:19.785+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:55:19.789+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:55:19.790+02:00  INFO 22684 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T15:55:19.865+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: John Boyd
-2026-04-28T15:55:19.866+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: John Boyd
-2026-04-28T15:55:19.869+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: John Boyd
-2026-04-28T15:55:19.873+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Boyd
-2026-04-28T15:55:19.874+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Boyd
-2026-04-28T15:55:19.877+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T15:55:19.878+02:00  WARN 22684 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T15:55:19.889+02:00  INFO 22684 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T15:55:19.889+02:00  WARN 22684 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
-2026-04-28T15:56:27.065+02:00  INFO 15112 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 15112 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:56:27.067+02:00  INFO 15112 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:56:29.455+02:00  INFO 15112 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:56:29.456+02:00  INFO 15112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:56:29.458+02:00  INFO 15112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2026-04-28T15:56:29.508+02:00  INFO 15112 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.149 seconds (process running for 4.868)
-2026-04-28T15:56:30.030+02:00  INFO 15112 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:56:30.060+02:00  INFO 15112 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T15:56:30.066+02:00  INFO 15112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:56:30.103+02:00  INFO 15112 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 15112 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:56:30.103+02:00  INFO 15112 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:56:30.396+02:00  INFO 15112 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:56:30.396+02:00  INFO 15112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:56:30.397+02:00  INFO 15112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T15:56:30.404+02:00  INFO 15112 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.339 seconds (process running for 5.764)
-2026-04-28T15:56:30.460+02:00  INFO 15112 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:56:30.473+02:00  INFO 15112 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T15:56:30.482+02:00  INFO 15112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:56:30.508+02:00  INFO 15112 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 15112 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:56:30.509+02:00  INFO 15112 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:56:30.942+02:00  INFO 15112 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T15:56:30.943+02:00  INFO 15112 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T15:56:30.945+02:00  INFO 15112 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T15:56:30.945+02:00  INFO 15112 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T15:56:31.188+02:00  INFO 15112 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.706 seconds (process running for 6.548)
-2026-04-28T15:56:31.378+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:56:31.383+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:56:31.390+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:56:31.391+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:56:31.396+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:56:31.397+02:00  INFO 15112 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T15:56:31.481+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: John Boyd
-2026-04-28T15:56:31.483+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: John Boyd
-2026-04-28T15:56:31.488+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: John Boyd
-2026-04-28T15:56:31.494+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Boyd
-2026-04-28T15:56:31.495+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Boyd
-2026-04-28T15:56:31.500+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T15:56:31.501+02:00  WARN 15112 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T15:56:31.516+02:00  INFO 15112 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T15:56:31.517+02:00  WARN 15112 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
-2026-04-28T15:57:00.853+02:00  INFO 11912 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 11912 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:57:00.854+02:00  INFO 11912 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:57:03.204+02:00  INFO 11912 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:57:03.205+02:00  INFO 11912 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:57:03.206+02:00  INFO 11912 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T15:57:03.247+02:00  INFO 11912 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.08 seconds (process running for 4.839)
-2026-04-28T15:57:03.682+02:00  INFO 11912 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:57:03.699+02:00  INFO 11912 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T15:57:03.709+02:00  INFO 11912 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:57:03.743+02:00  INFO 11912 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 11912 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:57:03.743+02:00  INFO 11912 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:57:04.015+02:00  INFO 11912 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T15:57:04.016+02:00  INFO 11912 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T15:57:04.025+02:00  INFO 11912 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-04-28T15:57:04.031+02:00  INFO 11912 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.324 seconds (process running for 5.623)
-2026-04-28T15:57:04.082+02:00  INFO 11912 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T15:57:04.093+02:00  INFO 11912 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T15:57:04.106+02:00  INFO 11912 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T15:57:04.133+02:00  INFO 11912 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 11912 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T15:57:04.133+02:00  INFO 11912 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T15:57:04.502+02:00  INFO 11912 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T15:57:04.502+02:00  INFO 11912 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T15:57:04.504+02:00  INFO 11912 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T15:57:04.505+02:00  INFO 11912 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T15:57:04.760+02:00  INFO 11912 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.655 seconds (process running for 6.353)
-2026-04-28T15:57:04.949+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:57:04.951+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:57:04.959+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:57:04.960+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T15:57:04.965+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T15:57:04.966+02:00  INFO 11912 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T15:57:05.058+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: John Boyd
-2026-04-28T15:57:05.059+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: John Boyd
-2026-04-28T15:57:05.063+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: John Boyd
-2026-04-28T15:57:05.067+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Boyd
-2026-04-28T15:57:05.068+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Boyd
-2026-04-28T15:57:05.071+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T15:57:05.071+02:00  WARN 11912 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T15:57:05.084+02:00  INFO 11912 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T15:57:05.085+02:00  WARN 11912 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
-2026-04-28T16:13:48.220+02:00  INFO 27604 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 27604 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:13:48.223+02:00  INFO 27604 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:13:50.976+02:00  INFO 27604 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T16:13:50.976+02:00  INFO 27604 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T16:13:50.978+02:00  INFO 27604 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T16:13:51.026+02:00  INFO 27604 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.544 seconds (process running for 5.835)
-2026-04-28T16:13:51.477+02:00  INFO 27604 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T16:13:51.503+02:00  INFO 27604 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T16:13:51.511+02:00  INFO 27604 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T16:13:51.547+02:00  INFO 27604 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 27604 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:13:51.548+02:00  INFO 27604 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:13:51.793+02:00  INFO 27604 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T16:13:51.793+02:00  INFO 27604 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T16:13:51.794+02:00  INFO 27604 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T16:13:51.800+02:00  INFO 27604 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.289 seconds (process running for 6.608)
-2026-04-28T16:13:51.851+02:00  INFO 27604 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T16:13:51.861+02:00  INFO 27604 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T16:13:51.870+02:00  INFO 27604 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T16:13:51.893+02:00  INFO 27604 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 27604 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:13:51.894+02:00  INFO 27604 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:13:52.264+02:00  INFO 27604 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T16:13:52.264+02:00  INFO 27604 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T16:13:52.266+02:00  INFO 27604 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T16:13:52.267+02:00  INFO 27604 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T16:13:52.487+02:00  INFO 27604 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.617 seconds (process running for 7.295)
-2026-04-28T16:13:52.666+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:13:52.671+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T16:13:52.675+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:13:52.676+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T16:13:52.680+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:13:52.681+02:00  INFO 27604 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T16:13:52.758+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: John Boyd
-2026-04-28T16:13:52.759+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: John Boyd
-2026-04-28T16:13:52.763+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: John Boyd
-2026-04-28T16:13:52.767+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Boyd
-2026-04-28T16:13:52.767+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Boyd
-2026-04-28T16:13:52.771+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T16:13:52.771+02:00  WARN 27604 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T16:13:52.782+02:00  INFO 27604 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T16:13:52.783+02:00  WARN 27604 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
-2026-04-28T16:15:17.929+02:00  INFO 5820 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 5820 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:15:17.931+02:00  INFO 5820 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:15:20.451+02:00  INFO 5820 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T16:15:20.451+02:00  INFO 5820 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T16:15:20.453+02:00  INFO 5820 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T16:15:20.493+02:00  INFO 5820 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.475 seconds (process running for 5.486)
-2026-04-28T16:15:20.922+02:00  INFO 5820 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T16:15:20.939+02:00  INFO 5820 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
-2026-04-28T16:15:20.945+02:00  INFO 5820 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T16:15:20.981+02:00  INFO 5820 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 5820 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:15:20.981+02:00  INFO 5820 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:15:21.229+02:00  INFO 5820 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-28T16:15:21.229+02:00  INFO 5820 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T16:15:21.230+02:00  INFO 5820 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-04-28T16:15:21.235+02:00  INFO 5820 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.29 seconds (process running for 6.228)
-2026-04-28T16:15:21.284+02:00  INFO 5820 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-28T16:15:21.294+02:00  INFO 5820 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
-2026-04-28T16:15:21.304+02:00  INFO 5820 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2026-04-28T16:15:21.333+02:00  INFO 5820 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 5820 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
-2026-04-28T16:15:21.334+02:00  INFO 5820 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T16:15:21.719+02:00  INFO 5820 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
-2026-04-28T16:15:21.719+02:00  INFO 5820 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
-2026-04-28T16:15:21.721+02:00  INFO 5820 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
-2026-04-28T16:15:21.722+02:00  INFO 5820 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
-2026-04-28T16:15:21.955+02:00  INFO 5820 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.651 seconds (process running for 6.948)
-2026-04-28T16:15:22.145+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:15:22.149+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T16:15:22.154+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:15:22.155+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
-2026-04-28T16:15:22.160+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
-2026-04-28T16:15:22.161+02:00  INFO 5820 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
-2026-04-28T16:15:22.234+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T16:15:22.235+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
-2026-04-28T16:15:22.239+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
-2026-04-28T16:15:22.239+02:00  WARN 5820 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
-2026-04-28T16:15:22.242+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
-2026-04-28T16:15:22.246+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
-2026-04-28T16:15:22.247+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
-2026-04-28T16:15:22.251+02:00  INFO 5820 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
-2026-04-28T16:15:22.251+02:00  WARN 5820 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
+2026-05-04T11:05:28.310+02:00  INFO 15280 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 15280 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:28.337+02:00  INFO 15280 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:31.166+02:00  INFO 15280 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:05:31.166+02:00  INFO 15280 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:05:31.168+02:00  INFO 15280 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:05:31.218+02:00  INFO 15280 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.661 seconds (process running for 6.185)
+2026-05-04T11:05:31.696+02:00  INFO 15280 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:05:31.733+02:00  INFO 15280 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
+2026-05-04T11:05:31.744+02:00  INFO 15280 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:05:31.779+02:00  INFO 15280 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 15280 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:31.780+02:00  INFO 15280 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:32.007+02:00  INFO 15280 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:05:32.007+02:00  INFO 15280 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:05:32.008+02:00  INFO 15280 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:05:32.014+02:00  INFO 15280 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.272 seconds (process running for 6.981)
+2026-05-04T11:05:32.064+02:00  INFO 15280 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:05:32.077+02:00  INFO 15280 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
+2026-05-04T11:05:32.087+02:00  INFO 15280 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:05:32.112+02:00  INFO 15280 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 15280 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:32.112+02:00  INFO 15280 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:32.516+02:00  INFO 15280 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
+2026-05-04T11:05:32.516+02:00  INFO 15280 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
+2026-05-04T11:05:32.519+02:00  INFO 15280 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
+2026-05-04T11:05:32.519+02:00  INFO 15280 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
+2026-05-04T11:05:32.741+02:00  INFO 15280 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.653 seconds (process running for 7.708)
+2026-05-04T11:05:32.960+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:32.966+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:05:32.972+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:32.973+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:05:32.980+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:32.981+02:00  INFO 15280 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
+2026-05-04T11:05:33.068+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:05:33.070+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
+2026-05-04T11:05:33.076+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
+2026-05-04T11:05:33.077+02:00  WARN 15280 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
+2026-05-04T11:05:33.080+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
+2026-05-04T11:05:33.084+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
+2026-05-04T11:05:33.084+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
+2026-05-04T11:05:33.088+02:00  INFO 15280 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:05:33.088+02:00  WARN 15280 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
+2026-05-04T11:05:48.540+02:00  INFO 12344 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 12344 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:48.542+02:00  INFO 12344 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:51.129+02:00  INFO 12344 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:05:51.129+02:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:05:51.131+02:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:05:51.177+02:00  INFO 12344 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.422 seconds (process running for 5.301)
+2026-05-04T11:05:51.653+02:00  INFO 12344 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:05:51.671+02:00  INFO 12344 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
+2026-05-04T11:05:51.678+02:00  INFO 12344 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:05:51.726+02:00  INFO 12344 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 12344 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:51.727+02:00  INFO 12344 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:51.977+02:00  INFO 12344 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:05:51.977+02:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:05:51.978+02:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:05:51.984+02:00  INFO 12344 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.306 seconds (process running for 6.109)
+2026-05-04T11:05:52.044+02:00  INFO 12344 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:05:52.062+02:00  INFO 12344 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
+2026-05-04T11:05:52.073+02:00  INFO 12344 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:05:52.097+02:00  INFO 12344 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 12344 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:05:52.098+02:00  INFO 12344 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:05:52.507+02:00  INFO 12344 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
+2026-05-04T11:05:52.507+02:00  INFO 12344 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
+2026-05-04T11:05:52.510+02:00  INFO 12344 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
+2026-05-04T11:05:52.510+02:00  INFO 12344 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
+2026-05-04T11:05:52.747+02:00  INFO 12344 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.675 seconds (process running for 6.872)
+2026-05-04T11:05:52.954+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:52.960+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:05:52.965+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:52.965+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:05:52.969+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:05:52.970+02:00  INFO 12344 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
+2026-05-04T11:05:53.054+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:05:53.056+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
+2026-05-04T11:05:53.060+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
+2026-05-04T11:05:53.061+02:00  WARN 12344 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
+2026-05-04T11:05:53.065+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
+2026-05-04T11:05:53.068+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
+2026-05-04T11:05:53.068+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
+2026-05-04T11:05:53.073+02:00  INFO 12344 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:05:53.075+02:00  WARN 12344 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
+2026-05-04T11:39:30.475+02:00  INFO 24292 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 24292 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:39:30.480+02:00  INFO 24292 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:39:33.324+02:00  INFO 24292 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:39:33.325+02:00  INFO 24292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:39:33.327+02:00  INFO 24292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:39:33.388+02:00  INFO 24292 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.73 seconds (process running for 6.269)
+2026-05-04T11:39:33.955+02:00  INFO 24292 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:39:33.971+02:00  INFO 24292 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
+2026-05-04T11:39:33.982+02:00  INFO 24292 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:39:34.052+02:00  INFO 24292 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 24292 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:39:34.055+02:00  INFO 24292 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:39:34.346+02:00  INFO 24292 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:39:34.346+02:00  INFO 24292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:39:34.347+02:00  INFO 24292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-05-04T11:39:34.354+02:00  INFO 24292 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.375 seconds (process running for 7.236)
+2026-05-04T11:39:34.419+02:00  INFO 24292 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:39:34.427+02:00  INFO 24292 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
+2026-05-04T11:39:34.439+02:00  INFO 24292 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:39:34.464+02:00  INFO 24292 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 24292 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:39:34.464+02:00  INFO 24292 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:39:35.005+02:00  INFO 24292 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
+2026-05-04T11:39:35.006+02:00  INFO 24292 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
+2026-05-04T11:39:35.010+02:00  INFO 24292 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
+2026-05-04T11:39:35.010+02:00  INFO 24292 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
+2026-05-04T11:39:35.276+02:00  INFO 24292 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.838 seconds (process running for 8.157)
+2026-05-04T11:39:35.504+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:39:35.509+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:39:35.516+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:39:35.517+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:39:35.525+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:39:35.526+02:00  INFO 24292 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
+2026-05-04T11:39:35.616+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:39:35.617+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
+2026-05-04T11:39:35.622+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
+2026-05-04T11:39:35.622+02:00  WARN 24292 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
+2026-05-04T11:39:35.627+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
+2026-05-04T11:39:35.630+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
+2026-05-04T11:39:35.630+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
+2026-05-04T11:39:35.635+02:00  INFO 24292 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:39:35.635+02:00  WARN 24292 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
+2026-05-04T11:39:59.002+02:00  INFO 19920 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 19920 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:39:59.007+02:00  INFO 19920 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:02.185+02:00  INFO 19920 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:40:02.185+02:00  INFO 19920 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:40:02.187+02:00  INFO 19920 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:40:02.241+02:00  INFO 19920 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 4.07 seconds (process running for 6.231)
+2026-05-04T11:40:02.740+02:00  INFO 19920 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:40:02.757+02:00  INFO 19920 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
+2026-05-04T11:40:02.762+02:00  INFO 19920 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:40:02.822+02:00  INFO 19920 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 19920 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:40:02.823+02:00  INFO 19920 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:03.172+02:00  INFO 19920 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:40:03.173+02:00  INFO 19920 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:40:03.174+02:00  INFO 19920 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:40:03.183+02:00  INFO 19920 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.421 seconds (process running for 7.173)
+2026-05-04T11:40:03.241+02:00  INFO 19920 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:40:03.253+02:00  INFO 19920 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
+2026-05-04T11:40:03.264+02:00  INFO 19920 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:40:03.292+02:00  INFO 19920 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 19920 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:40:03.292+02:00  INFO 19920 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:03.772+02:00  INFO 19920 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
+2026-05-04T11:40:03.773+02:00  INFO 19920 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
+2026-05-04T11:40:03.775+02:00  INFO 19920 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
+2026-05-04T11:40:03.775+02:00  INFO 19920 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
+2026-05-04T11:40:04.022+02:00  INFO 19920 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.759 seconds (process running for 8.012)
+2026-05-04T11:40:04.222+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:04.225+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:40:04.230+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:04.230+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:40:04.233+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:04.233+02:00  INFO 19920 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
+2026-05-04T11:40:04.360+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:40:04.363+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
+2026-05-04T11:40:04.367+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
+2026-05-04T11:40:04.368+02:00  WARN 19920 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
+2026-05-04T11:40:04.372+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
+2026-05-04T11:40:04.377+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
+2026-05-04T11:40:04.377+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
+2026-05-04T11:40:04.379+02:00  INFO 19920 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:40:04.380+02:00  WARN 19920 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe
+2026-05-04T11:40:10.722+02:00  INFO 19276 --- [main] c.s.a.c.CommunityEmailControllerTest     : Starting CommunityEmailControllerTest using Java 17.0.18 with PID 19276 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:40:10.725+02:00  INFO 19276 --- [main] c.s.a.c.CommunityEmailControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:13.487+02:00  INFO 19276 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:40:13.487+02:00  INFO 19276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:40:13.489+02:00  INFO 19276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-04T11:40:13.545+02:00  INFO 19276 --- [main] c.s.a.c.CommunityEmailControllerTest     : Started CommunityEmailControllerTest in 3.591 seconds (process running for 5.358)
+2026-05-04T11:40:14.051+02:00  INFO 19276 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:40:14.082+02:00  INFO 19276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.controller.FirestationControllerTest
+2026-05-04T11:40:14.089+02:00  INFO 19276 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:40:14.128+02:00  INFO 19276 --- [main] c.s.a.c.FirestationControllerTest        : Starting FirestationControllerTest using Java 17.0.18 with PID 19276 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:40:14.128+02:00  INFO 19276 --- [main] c.s.a.c.FirestationControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:14.397+02:00  INFO 19276 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-04T11:40:14.397+02:00  INFO 19276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-04T11:40:14.398+02:00  INFO 19276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-05-04T11:40:14.406+02:00  INFO 19276 --- [main] c.s.a.c.FirestationControllerTest        : Started FirestationControllerTest in 0.318 seconds (process running for 6.22)
+2026-05-04T11:40:14.462+02:00  INFO 19276 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetynetAlertsApplicationTests]: SafetynetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-04T11:40:14.471+02:00  INFO 19276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetynetAlertsApplication for test class com.safetynet.alerts.SafetynetAlertsApplicationTests
+2026-05-04T11:40:14.480+02:00  INFO 19276 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-05-04T11:40:14.507+02:00  INFO 19276 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Starting SafetynetAlertsApplicationTests using Java 17.0.18 with PID 19276 (started by rebek in c:\Users\rebek\SafetyNet\SafetyNet.alerts)
+2026-05-04T11:40:14.508+02:00  INFO 19276 --- [main] c.s.a.SafetynetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-05-04T11:40:14.937+02:00  INFO 19276 --- [main] c.s.alerts.repository.DataLoader         : Data loaded successfully
+2026-05-04T11:40:14.937+02:00  INFO 19276 --- [main] c.s.alerts.repository.DataLoader         : Persons: 23
+2026-05-04T11:40:14.939+02:00  INFO 19276 --- [main] c.s.alerts.repository.DataLoader         : Firestations: 13
+2026-05-04T11:40:14.940+02:00  INFO 19276 --- [main] c.s.alerts.repository.DataLoader         : Medical records: 23
+2026-05-04T11:40:15.190+02:00  INFO 19276 --- [main] c.s.a.SafetynetAlertsApplicationTests    : Started SafetynetAlertsApplicationTests in 0.709 seconds (process running for 7.003)
+2026-05-04T11:40:15.399+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:15.404+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:40:15.413+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:15.416+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Found 1 resident(s) for address 1509 Culver St covered by station 3
+2026-05-04T11:40:15.423+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Fetching residents for address: 1509 Culver St
+2026-05-04T11:40:15.425+02:00  INFO 19276 --- [main] c.safetynet.alerts.service.FireService   : Found 0 resident(s) for address 1509 Culver St covered by station 0
+2026-05-04T11:40:15.516+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:40:15.517+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Person deleted successfully: Jane Doe
+2026-05-04T11:40:15.523+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: Jane Doe
+2026-05-04T11:40:15.524+02:00  WARN 19276 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for update: Jane Doe
+2026-05-04T11:40:15.527+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Adding person: Jane Doe
+2026-05-04T11:40:15.531+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Updating person: John Doe
+2026-05-04T11:40:15.532+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Person updated successfully: John Doe
+2026-05-04T11:40:15.536+02:00  INFO 19276 --- [main] c.s.alerts.service.PersonCrudService     : Deleting person: Jane Doe
+2026-05-04T11:40:15.537+02:00  WARN 19276 --- [main] c.s.alerts.service.PersonCrudService     : Person not found for deletion: Jane Doe

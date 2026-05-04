@@ -67,6 +67,59 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.gmavenplus</groupId>
+				<artifactId>gmavenplus-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>generate-surefire-csv-report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<scripts>
+								<script><![CDATA[
+									import groovy.xml.XmlSlurper
+
+									def reportsDir = new File(project.build.directory, "surefire-reports")
+									def outputFile = new File(project.build.directory, "surefire-report.csv")
+
+									outputFile.parentFile.mkdirs()
+									outputFile.text = "TestClass,TestName,Status,Time\n"
+
+									if (reportsDir.exists()) {
+										reportsDir.eachFileMatch(~/TEST-.*\.xml/) { file ->
+											def testsuite = new XmlSlurper().parse(file)
+
+											testsuite.testcase.each { test ->
+												def className = test.@classname.text()
+												def testName = test.@name.text()
+												def time = test.@time.text()
+												def status = "PASSED"
+
+												if (test.failure.size() > 0) {
+													status = "FAILED"
+												} else if (test.error.size() > 0) {
+													status = "ERROR"
+												} else if (test.skipped.size() > 0) {
+													status = "SKIPPED"
+												}
+
+												outputFile << "${className},${testName},${status},${time}\n"
+											}
+										}
+									}
+
+									println "Surefire CSV report generated: ${outputFile}"
+								]]></script>
+							</scripts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
