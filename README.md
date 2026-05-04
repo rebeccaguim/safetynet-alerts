@@ -20,13 +20,12 @@ Controller → Service → DataLoader → JSON file
 - DTOs: format API responses  
 
 ##  Technologies
--Java 17
--Spring Boot
--Maven
--JUnit
--JaCoCo
--SLF4J
--Jackson
+- Java 17
+- Spring Boot
+- Maven
+- JUnit
+- JaCoCo
+- Jackson
 
 ##  Testing
 
